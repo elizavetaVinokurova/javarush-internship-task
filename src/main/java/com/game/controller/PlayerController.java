@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/rest/players")
 public class PlayerController {
+
     @Autowired
     PlayerService playerService;
 
     @GetMapping("/{id}")
     public ResponseEntity<Player> getPlayer(@PathVariable("id") Long playerId) {
-        Player player = playerService.getById(playerId);
+        Player player = this.playerService.getById(playerId);
 
         return new ResponseEntity<>(player, HttpStatus.OK);
     }

@@ -15,11 +15,11 @@ import java.util.List;
 public class PlayerServiceImpl implements PlayerService {
 
     @Autowired
-    PlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
 
     @Override
     public Player getById(Long id) {
-        return playerRepository.getOne(id);
+        return playerRepository.getById(id);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public List<Player> getPlayersByNameAndTitle(String name, String title) {
-        return playerRepository.getPlayersByNameAndTitle(name, title);
+        return null;
     }
 
 

@@ -1,14 +1,14 @@
 package com.game.service;
 
 import com.game.entity.Player;
+import com.game.entity.Profession;
+import com.game.entity.Race;
 import com.game.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 @Service
@@ -36,11 +36,5 @@ public class PlayerServiceImpl implements PlayerService {
     public List<Player> getAll() {
         return playerRepository.findAll();
     }
-
-    @Override
-    public List<Player> getPlayersByNameAndTitle(String name, String title) {
-        return null;
-    }
-
 
 }
